@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "examples/capabilities.rb",
+     "ffi-opencl.gemspec",
      "interfaces/cl.h",
      "interfaces/cl.i",
      "interfaces/cl_gl.h",
