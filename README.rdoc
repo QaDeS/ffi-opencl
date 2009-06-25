@@ -1,0 +1,7 @@
+= ffi-opencl
+
+Description goes here.
+
+== Copyright
+
+Copyright (c) 2009 Martin Hess. See LICENSE for details.
