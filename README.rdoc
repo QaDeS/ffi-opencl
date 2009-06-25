@@ -8,8 +8,12 @@ Copyright (c) 2009 Martin Hess. See LICENSE for details.
 
 == Installation
 
-[sudo] gem install ffi-opencl
+	[sudo] gem install ffi-opencl --source http://gems.github.com
 
+Or you can permanently add github to your gemservers with:
+
+	gem sources -a http://gems.github.com
+	[sudo] gem install ffi-opencl
 
 === Non Ruby dependencies
 
