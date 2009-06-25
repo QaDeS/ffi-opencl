@@ -1,7 +1,38 @@
 = ffi-opencl
 
-Description goes here.
+This is an automatically generated ffi to OpenCL. There are no rubyisms to make the OpenCL API easier to use.
 
 == Copyright
 
 Copyright (c) 2009 Martin Hess. See LICENSE for details.
+
+== Installation
+
+[sudo] gem install ffi-opencl
+
+
+=== Non Ruby dependencies
+
+You need these to use the gem:
+
+* libffi
+* OpenCL Driver
+
+== Gem development
+
+You need this non-ruby executable if you want to work on the gem:
+
+* swig
+
+On a Mac this can be installed with:
+
+	sudo port install libffi swig
+	
+Additionally, you will need the ruby gem:
+
+* ffi-swig-generator
+	
+== TODO
+
+* Test cases to help verify that it works correctly on different OSs and CPU architectures
+* More and better examples

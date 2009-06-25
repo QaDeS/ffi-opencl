@@ -1,3 +1,5 @@
+$: << "../lib"
+
 begin
   require 'rubygems'
 rescue

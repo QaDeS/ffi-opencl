@@ -10,6 +10,10 @@ begin
     gem.homepage = "http://github.com/hessml/ffi-opencl"
     gem.authors = ["Martin Hess"]
     gem.rubyforge_project = "ffi-opencl"
+    gem.add_dependency('ffi', '>= 0.3.0')
+    gem.requirements << 'libffi'
+    gem.requirements << 'swig'
+    gem.requirements << 'opencl 1.0 driver'
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 
@@ -31,8 +35,8 @@ Spec::Rake::SpecTask.new(:rcov) do |spec|
 end
 
 
-task :default => :spec
 
+task :default => :spec
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
   if File.exist?('VERSION.yml')
@@ -47,4 +51,16 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+# Load the other rake files in the tasks folder
+require 'fileutils'
+require 'find'
+begin
+    tasks_dir = File.join(File.expand_path(File.dirname(__FILE__)), "/tasks")
+    rakefiles = Dir.glob(File.join(tasks_dir, '*.rake')).sort
+    import(*rakefiles)
+rescue 
+    puts "Problem importing tasks/*.rake"
+end
+
 
