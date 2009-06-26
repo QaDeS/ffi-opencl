@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ffi-opencl}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Martin Hess"]
@@ -30,7 +30,9 @@ Gem::Specification.new do |s|
      "lib/ffi-opencl/platform.rb",
      "spec/ffi-opencl_spec.rb",
      "spec/spec_helper.rb",
-     "tasks/generator.rake"
+     "tasks/generator.rake",
+     "test/ffi-opencl_test.rb",
+     "test/test_helper.rb"
   ]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/hessml/ffi-opencl}
@@ -43,6 +45,8 @@ Gem::Specification.new do |s|
   s.test_files = [
     "spec/ffi-opencl_spec.rb",
      "spec/spec_helper.rb",
+     "test/ffi-opencl_test.rb",
+     "test/test_helper.rb",
      "examples/capabilities.rb"
   ]
 
