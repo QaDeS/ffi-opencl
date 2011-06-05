@@ -27,7 +27,7 @@ extend FFI::Library
   CL_DBL_MIN_10_EXP = -307
   CL_DBL_MIN_EXP = -1021
   CL_DBL_RADIX = 2
-  attach_function :__clGetExtensionFunctionAddress, [ :string ], :pointer
+#  attach_function :__clGetExtensionFunctionAddress, [ :string ], :pointer
   class ClImageFormat < FFI::Struct
     layout(
            :image_channel_order, :uint,
